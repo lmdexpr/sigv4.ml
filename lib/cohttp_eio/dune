@@ -1,0 +1,4 @@
+(library
+ (name sigv4_cohttp_eio)
+ (public_name sigv4-cohttp-eio)
+ (libraries sigv4 eio eio.core cohttp-eio uri yojson))

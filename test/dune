@@ -1,0 +1,5 @@
+(tests
+ (names test_aws_suite test_credentials)
+ (libraries sigv4 uri alcotest yojson)
+ (deps
+  (source_tree aws-c-auth/tests/aws-signing-test-suite/v4)))

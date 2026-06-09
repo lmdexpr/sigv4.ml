@@ -1,0 +1,3 @@
+(library
+ (public_name sigv4)
+ (libraries uri digestif))
