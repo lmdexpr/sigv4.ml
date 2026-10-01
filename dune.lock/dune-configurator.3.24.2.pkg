@@ -1,4 +1,4 @@
-(version 3.23.1)
+(version 3.24.2)
 
 (build
  (all_platforms
@@ -14,6 +14,6 @@
 (source
  (fetch
   (url
-   https://github.com/ocaml/dune/releases/download/3.23.1/dune-3.23.1.tbz)
+   https://github.com/ocaml/dune/releases/download/3.24.2/dune-3.24.2.tbz)
   (checksum
-   sha512=e5566bedc651292ae54d47ba1cdbcfff48962012c1436d0f9ece49a71aa10a674affc092058b0edee56ab2a2405c545b78fde1c472c0b4704c8f58570a2f46cd)))
+   sha512=13082a66a28e940d4b3c9f78b556f6c1455987cd522355ba4502e01e60a3d002d3101b51284726ae21aa87494efa2dc54d016173f05b616bbc5dad714d5714a3)))

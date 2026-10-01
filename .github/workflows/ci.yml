@@ -28,7 +28,7 @@ jobs:
       - uses: ocaml-dune/setup-dune@v2.1.0
         with:
           # Keep in sync with the local dune; nightly would make dune.lock churn
-          version: 3.23.1
+          version: 3.24.2
       # Run here rather than in a separate job: @fmt needs the locked compiler
       # this job already built, and a second job would race on the same cache key.
       - name: Check formatting
