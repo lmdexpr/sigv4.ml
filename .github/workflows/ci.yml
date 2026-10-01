@@ -29,18 +29,11 @@ jobs:
         with:
           # Keep in sync with the local dune; nightly would make dune.lock churn
           version: 3.23.1
-
-  fmt:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7.0.1
-        with:
-          persist-credentials: false
-      - uses: ocaml-dune/setup-dune@v2.1.0
-        with:
-          version: 3.23.1
-          steps: install-dune enable-pkg
-      - run: dune tools install ocamlformat
-      - run: |
+      # Run here rather than in a separate job: @fmt needs the locked compiler
+      # this job already built, and a second job would race on the same cache key.
+      - name: Check formatting
+        if: runner.os == 'Linux'
+        run: |
+          dune tools install ocamlformat
           eval "$(dune tools env)"
           dune build @fmt
